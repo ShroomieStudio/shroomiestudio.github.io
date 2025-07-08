@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShroomieStudio</title>
   <style>
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: url('./Back.png') center top no-repeat;
+    body {
+      margin: 0;
+      font-family: 'Trebuchet MS', sans-serif;
+      background: url('Back.png') center top no-repeat, #1b1e1d;
       background-size: cover;
-      z-index: -1;
-      opacity: 1;
+      background-attachment: fixed;
+      color: #f4f4f4;
     }
 
     .container {
