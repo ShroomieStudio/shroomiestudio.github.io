@@ -1,110 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShroomieStudio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fcf5e5;
-      color: #3b2f2f;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.6;
     }
     header {
-      background-color: #6b4f3b;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #fff178;
+    }
+    nav a {
+      color: #aaa;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
     }
     section {
-      padding: 40px 20px;
+      padding: 3rem 2rem;
       max-width: 800px;
       margin: auto;
     }
-    h1, h2 {
-      color: #5c3a2e;
+    .hero h2 {
+      font-size: 2rem;
+      color: #fff178;
     }
-    .asset {
-      background: #fffaf3;
-      border: 1px solid #e5d6bd;
-      padding: 20px;
-      margin-bottom: 20px;
+    .projects img {
+      width: 100%;
       border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: 0 0 10px #0008;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    form input, form textarea {
+      background: #222;
+      color: #eee;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+    form textarea {
+      grid-column: span 2;
+      resize: vertical;
+    }
+    .submit-btn {
+      grid-column: span 2;
+      text-align: center;
+    }
+    .submit-btn button {
+      padding: 0.75rem 2rem;
+      background: #fff178;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #111;
+      font-weight: 600;
     }
     footer {
-      background: #6b4f3b;
-      color: white;
       text-align: center;
-      padding: 10px;
-    }
-    a {
-      color: #8b5e3c;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      padding: 2rem;
+      color: #555;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>ShroomieStudio</h1>
-    <p>Indie UI & Game Assets for Unity Developers</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>Hello! I’m Kristina Mironenko, the creator of ShroomieStudio — a cozy little studio focused on designing intuitive UI kits and fun game templates for Unity developers. All assets are handcrafted with care and passion.</p>
+  <section class="hero" id="about">
+    <h2>About Me</h2>
+    <p>I’m Kristina from ShroomieStudio — an independent developer passionate about creating cozy 2D games with character. I specialize in Unity, hand-crafted UI kits, charming animations, and well-documented, beginner-friendly systems.</p>
+    <p>What I offer:</p>
+    <ul>
+      <li>🕹️ Complete 2D game templates</li>
+      <li>🎨 Custom UI kits for mobile games</li>
+      <li>⚙️ Clean and editable Unity C# scripts</li>
+      <li>💡 Merge mechanics, puzzle logic, minigames</li>
+      <li>📱 Mobile optimization & stylized assets</li>
+    </ul>
   </section>
 
-  <section>
-    <h2>Assets</h2>
-
-    <div class="asset">
-      <h3>Tic Tac Toe Game Template</h3>
-      <p>A full-featured 2D Tic Tac Toe game template with animated symbols, two game modes (PvP & AI), smooth UI and sound effects.</p>
-      <ul>
-        <li>AI with Minimax</li>
-        <li>Touch & desktop ready</li>
-        <li>Clean C# scripts</li>
-      </ul>
-    </div>
-
-    <div class="asset">
-      <h3>Wooden UI Pack</h3>
-      <p>A cozy UI set for mobile & desktop games. Includes checkboxes, toggles, dropdowns, sliders, progress bars, popups and more.</p>
-    </div>
-
-    <div class="asset">
-      <h3>Popup Manager</h3>
-      <p>Simple prefab system for reusable popup panels. Includes info windows, settings panels, input fields and custom animated buttons.</p>
-    </div>
+  <section class="projects" id="projects">
+    <h2>Recent Projects</h2>
+    <img src="images/tictactoe_preview.png" alt="Tic Tac Toe Game">
+    <p><strong>Tic Tac Toe Game Template</strong> – A polished 2D minigame with animated X/O symbols, AI opponent, and mobile-ready design.</p>
+    <img src="images/ui_pack_preview.png" alt="Wooden UI Kit">
+    <p><strong>Wooden UI Pack</strong> – A cozy and modular UI kit with toggles, sliders, buttons, and themed icons — perfect for mobile games and menus.</p>
   </section>
 
-  <section>
-    <h2>Licensing</h2>
-    <p>
-      All original artwork, UI, scripts, animations and prefabs are created by Kristina Mironenko for ShroomieStudio.
-      <br />
-      Fonts used:
-      <br />
-      - <strong>Luckiest Guy</strong> from Google Fonts – Licensed under the <a href="https://scripts.sil.org/OFL">Open Font License</a>.
-      <br />
-      <br />
-      Sound:
-      <br />
-      - <strong>"8bit Victory"</strong> by GabrielAraujo – <a href="https://freesound.org/people/GabrielAraujo/sounds/242501/">Source</a>, licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
-    </p>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:k.mironenko1109@gmail.com">k.mironenko1109@gmail.com</a></p>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you have a question or want to work together, feel free to reach out:</p>
+    <form action="mailto:k.mironenko1109@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <input type="text" name="invoice" placeholder="Invoice # (if applicable)">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <div class="submit-btn">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Kristina Mironenko — ShroomieStudio</p>
+    &copy; 2025 ShroomieStudio. All rights reserved.
   </footer>
 </body>
 </html>
